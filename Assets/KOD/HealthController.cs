@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
-using TMPro; // 1. ÖNEMLİ: Bunu eklemeyi unutma!
+using TMPro;
 
 public class HealthController : MonoBehaviour
 {
@@ -9,17 +9,15 @@ public class HealthController : MonoBehaviour
     public int toplamPuan = 0;
     int gecerli_can = 0;
 
-    // 2. UI Metinlerini buraya ekliyoruz
     public TextMeshProUGUI canYazisi; 
     public TextMeshProUGUI puanYazisi;
 
     public void Start()
     {
         gecerli_can = max_can;
-        UI_Guncelle(); // Oyun başlarken değerleri yazdır
+        UI_Guncelle(); 
     }
 
-    // 3. Ekranı güncellemek için küçük bir yardımcı fonksiyon
     void UI_Guncelle()
     {
         if (canYazisi != null) canYazisi.text = "CAN: " + gecerli_can;
@@ -34,13 +32,13 @@ public class HealthController : MonoBehaviour
             gecerli_can = 0;
             StartCoroutine(BekleVeYenidenBaslat());
         }
-        UI_Guncelle(); // Can değişince ekranı güncelle
+        UI_Guncelle(); 
     }
 
     public void puanAl(int puanMiktari)
     {
         toplamPuan += puanMiktari;
-        UI_Guncelle(); // Puan artınca ekranı güncelle
+        UI_Guncelle();
     }
 
     IEnumerator BekleVeYenidenBaslat()
