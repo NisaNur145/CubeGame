@@ -29,6 +29,11 @@ The player controls a cube and interacts with the game environment.
 ## 🛠️ Built With
 - **Unity**
 - **C#**
+  
+----
+## Learning Note
+This project was created as part of a Unity course.
+Additional features and improvements were implemented by me during the learning process.
 
 ---
 ## 📌 Status
